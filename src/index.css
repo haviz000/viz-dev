@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Doodle";
+  src: url("/public/fonts/GourmetEatery-V4qdw.otf") format("truetype");
+}
+
