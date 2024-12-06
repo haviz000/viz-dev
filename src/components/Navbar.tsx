@@ -1,18 +1,25 @@
 import { useMobileResponsive } from "@/hooks/useMobileResponsive";
 import ThemeToggle from "./ThemeToggle";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const isMobile = useMobileResponsive();
   return (
     <div className="w-full h-16 dark:bg-neutral-900  bg-white dark:text-white  flex justify-between pt-6 px-8 sticky top-0 z-50">
       <div className="font-doodle font-semibold text-center text-xl cursor-pointer">
-        Haviz.dev
+        <Link to="/">Haviz.dev</Link>
       </div>
       {!isMobile && (
         <div className="flex gap-x-12 font-doodle ">
-          <div className="cursor-pointer">Projects</div>
-          <div className="cursor-pointer">Timeline</div>
-          <div className="cursor-pointer">About</div>
+          <div className="cursor-pointer">
+            <Link to="/projects">Projects</Link>
+          </div>
+          <div className="cursor-pointer">
+            <Link to="/timeline">Timeline</Link>
+          </div>
+          <div className="cursor-pointer">
+            <Link to="/about">About</Link>
+          </div>
         </div>
       )}
       <div>

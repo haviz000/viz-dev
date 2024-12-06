@@ -1,14 +1,21 @@
-import Homepage from "./pages/Homepage";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+const Home = React.lazy(() => import("./pages/Homepage"));
+const Timeline = React.lazy(() => import("./pages/TimelinePage"));
 
+const App = () => {
   return (
-    <>
-      <div>
-        <Homepage />
-      </div>
-    </>
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/timeline" element={<Timeline />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+      </Suspense>
+    </Router>
   );
-}
+};
 
 export default App;

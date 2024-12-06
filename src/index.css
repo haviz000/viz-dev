@@ -7,3 +7,6 @@
   src: url("/public/fonts/GourmetEatery-V4qdw.otf") format("truetype");
 }
 
+html#no-scroll {
+  overflow: hidden;
+}

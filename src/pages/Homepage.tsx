@@ -1,13 +1,11 @@
 import MySelf from "@/components/MySelf";
 import Navbar from "@/components/Navbar";
-import Projects from "@/components/Projects";
 
 const Homepage = () => {
   return (
-    <div className="">
+    <div className="overflow-y-hidden" id="no-scroll">
       <Navbar />
       <MySelf />
-      <Projects />
     </div>
   );
 };

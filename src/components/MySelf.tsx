@@ -1,6 +1,7 @@
 import { Smiley, Angry, Flatty } from "@/assets";
 import { useMobileResponsive } from "@/hooks/useMobileResponsive";
 import { useState } from "react";
+import StickyBar from "./StickyBar";
 
 const MySelf = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,9 +27,9 @@ const MySelf = () => {
   };
 
   return (
-    <div className="w-full h-screen dark:bg-neutral-900 bg-white dark:text-white flex flex-col items-center justify-center overflow-hidden">
+    <div className="w-full h-screen dark:bg-neutral-900 bg-white dark:text-white flex flex-col items-center justify-center py-12">
       <div
-        className="bg-yellow-300 rounded-full"
+        className="dark:bg-yellow-300 bg-rose-700 rounded-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onDoubleClick={handleDoubleClick}
@@ -36,12 +37,13 @@ const MySelf = () => {
         {imageAction}
       </div>
       <div className={isMobile ? "px-4" : "max-w-4xl"}>
-        <p className="text-center">
+        <p className={`text-center font-semibold pt-8 ${isMobile && 'text-sm'}`}>
           Software engineer by day, Harry Potter by night—casting spells to fix
           bugs, defending the web with cybersecurity, and exploring Web3, all
           with my cat sidekick plotting world domination!
         </p>
       </div>
+      {isMobile && <StickyBar />}
     </div>
   );
 };
