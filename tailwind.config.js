@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         doodle: ["Doodle", "cursive"],
+        caveat: ['Caveat', 'cursive']
       },
     },
   },

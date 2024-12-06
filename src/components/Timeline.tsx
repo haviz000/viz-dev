@@ -1,47 +1,38 @@
+import { TimelineData } from "./constant";
+
 const Timeline = () => {
   return (
-    <div className="container dark:bg-neutral-900 bg-white mx-auto w-full h-full">
-      <div className="relative wrap overflow-hidden p-10 h-full">
-        <div
-          className="border-2-2 absolute border-opacity-20 dark:border-white border-neutral-900 h-full border"
-          style={{ left: "50%" }}
-        ></div>
-        {/* <!-- right timeline --> */}
-        <div className="mb-8 flex justify-between items-center w-full right-timeline">
-          <div className="order-1 w-5/12"></div>
-          <div className="z-20 flex items-center order-1 dark:bg-white bg-neutral-900 w-8 h-8 rounded-full">
-            <h1 className="mx-auto font-semibold text-lg text-white dark:text-neutral-900">
-              1
-            </h1>
+    <div className="flex h-full items-center justify-center px-6 md:px-60 dark:bg-neutral-900 mt-10 dark:text-white">
+      <div className="space-y-6 border-l-2 border-dashed mb-10">
+        {TimelineData.map((item) => (
+          <div className="relative w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full dark:text-yellow-300 text-rose-700"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <div className="ml-6">
+              <h4 className="font-bold dark:text-yellow-300 text-rose-700">
+                {item.company} - {item.jobRole}
+              </h4>
+              <ul className="mt-2 max-w-screen-sm text-sm list-disc">
+                {item.reports.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <span className="mt-1 block text-sm font-semibold dark:text-yellow-300 text-rose-700">
+                {item.period}
+              </span>
+            </div>
           </div>
-          <div className="order-1 bg-green-600 rounded-lg shadow-xl w-5/12 px-6 py-4">
-            <h3 className="mb-3 font-bold text-gray-800 text-xl">GOJEK </h3>{" "}
-            <p>Feb 2022 - Aug 2022</p>
-            <p className="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
-              Frontend Engineer (Internship)
-            </p>
-          </div>
-        </div>
-
-        {/* <!-- left timeline --> */}
-        <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-          <div className="order-1 w-5/12"></div>
-
-          <div className="z-20 flex items-center order-1 dark:bg-white bg-neutral-900 w-8 h-8 rounded-full">
-            <h1 className="mx-auto font-semibold text-lg text-white dark:text-neutral-900">
-              2
-            </h1>
-          </div>
-          <div className="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-            <h3 className="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-            <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

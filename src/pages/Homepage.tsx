@@ -3,8 +3,8 @@ import Navbar from "@/components/Navbar";
 
 const Homepage = () => {
   return (
-    <div className="overflow-y-hidden" id="no-scroll">
-      <Navbar />
+    <div>
+        <Navbar position="fixed"/>
       <MySelf />
     </div>
   );

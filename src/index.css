@@ -4,7 +4,12 @@
 
 @font-face {
   font-family: "Doodle";
-  src: url("/public/fonts/GourmetEatery-V4qdw.otf") format("truetype");
+  src: url("/fonts/GourmetEatery-V4qdw.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-VariableFont_wght.ttf") format("truetype");
 }
 
 html#no-scroll {

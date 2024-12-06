@@ -37,7 +37,7 @@ const MySelf = () => {
         {imageAction}
       </div>
       <div className={isMobile ? "px-4" : "max-w-4xl"}>
-        <p className={`text-center font-semibold pt-8 ${isMobile && 'text-sm'}`}>
+        <p className={`text-center font-caveat font-semibold pt-8 text-2xl ${isMobile && 'text-sm'}`}>
           Software engineer by day, Harry Potter by night—casting spells to fix
           bugs, defending the web with cybersecurity, and exploring Web3, all
           with my cat sidekick plotting world domination!
