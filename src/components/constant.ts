@@ -94,3 +94,33 @@ export const TimelineData = [
     ],
   },
 ];
+
+export const ProjectsData = [
+  {
+    projectName: "I-Learning",
+    status: "public",
+    desc: "Create i-learning app with php laravel and database with mysql",
+    colorLang: "bg-red-500",
+    language: "Laravel",
+    liveUrl: "",
+    codeUrl: "https://github.com/haviz000/i-learning",
+  },
+  {
+    projectName: "OrderFood Vue",
+    status: "public",
+    desc: "Create order food app with vue js and database with mysql",
+    colorLang: "bg-emerald-500",
+    language: "Vue JS",
+    liveUrl: "",
+    codeUrl: "https://github.com/haviz000/Order-Food-Vue-Js",
+  },
+  {
+    projectName: "Yuk Kerja App",
+    status: "public",
+    desc: "Create application for job seeker and job provider with React JS and Firebase.",
+    colorLang: "bg-cyan-400",
+    language: "React JS",
+    liveUrl: "",
+    codeUrl: "https://github.com/haviz000/yuk-kerja",
+  },
+];
