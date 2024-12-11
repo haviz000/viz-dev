@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { TimelineData } from "./constant";
+import StickyBar from "./StickyBar";
+import { useMobileResponsive } from "@/hooks/useMobileResponsive";
 
 const Timeline = () => {
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+  const isMobile = useMobileResponsive();
 
   const toggleCard = (index: number) => {
     setExpandedCards((prev) => ({
@@ -63,6 +66,7 @@ const Timeline = () => {
           </div>
         ))}
       </div>
+      {isMobile && <StickyBar />}
     </div>
   );
 };

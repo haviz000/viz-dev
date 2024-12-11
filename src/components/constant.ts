@@ -1,3 +1,5 @@
+import { AssetPasar, GolangLogo, Spotiviz } from "@/assets";
+
 export const TimelineData = [
   {
     company: "Dans Multi Pro",
@@ -97,30 +99,33 @@ export const TimelineData = [
 
 export const ProjectsData = [
   {
-    projectName: "I-Learning",
-    status: "public",
-    desc: "Create i-learning app with php laravel and database with mysql",
-    colorLang: "bg-red-500",
-    language: "Laravel",
-    liveUrl: "",
+    projectName: "E-pasar",
+    desc: "Build by react js as frontend and express as backend",
+    liveUrl: "https://pasar-jaya.vercel.app/",
+    date: "Jul 2021",
     codeUrl: "https://github.com/haviz000/i-learning",
+    Image: AssetPasar,
   },
   {
-    projectName: "OrderFood Vue",
-    status: "public",
-    desc: "Create order food app with vue js and database with mysql",
-    colorLang: "bg-emerald-500",
-    language: "Vue JS",
-    liveUrl: "",
-    codeUrl: "https://github.com/haviz000/Order-Food-Vue-Js",
+    projectName: "SpotivizApp",
+    desc: "Spotiviz is a web app built using React, Tailwind, Axios, and Spotify API which provides personalised data using your Spotify account and Make a playlist",
+    liveUrl: "http://spotiviz.vercel.app/",
+    codeUrl: "https://github.com/haviz000/SpotivizApp",
+    date: "Jul 2022",
+    Image: Spotiviz,
   },
   {
-    projectName: "Yuk Kerja App",
-    status: "public",
-    desc: "Create application for job seeker and job provider with React JS and Firebase.",
-    colorLang: "bg-cyan-400",
-    language: "React JS",
-    liveUrl: "",
-    codeUrl: "https://github.com/haviz000/yuk-kerja",
+    projectName: "Instagram Rest API with GO",
+    desc: "Create instagram API clone with golang",
+    codeUrl: "https://github.com/haviz000/SpotivizApp",
+    date: "Apr 2023",
+    Image: GolangLogo,
+  },
+  {
+    projectName: "API multi level user Golang",
+    desc: "Create iAPI multi level user Golang",
+    codeUrl: "https://github.com/haviz000/API-multi-level-user-golang",
+    date: "Apr 2023",
+    Image: GolangLogo,
   },
 ];

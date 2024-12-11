@@ -5,6 +5,7 @@ import Loading from "./components/Loading";
 const Home = React.lazy(() => import("./pages/Homepage"));
 const Timeline = React.lazy(() => import("./pages/TimelinePage"));
 const Projects = React.lazy(() => import("./pages/ProjectsPage"));
+const About = React.lazy(() => import("./pages/AboutPage"));
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Suspense>
     </Router>
